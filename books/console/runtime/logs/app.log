@@ -1,0 +1,521 @@
+2020-08-11 13:46:00 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php:705
+Stack trace:
+#0 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(705): PDO->__construct('mysql:host=loca...', 'books', '3qjxUzfvKdRSphZ...', NULL)
+#1 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(1025): yii\db\Connection->open()
+#3 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(255): yii\db\Connection->getSlavePdo()
+#5 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(1154): yii\db\Command->prepare(true)
+#6 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#19 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\Dmitry\openServer\OpenServer\domains\books\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php:637
+Stack trace:
+#0 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(1025): yii\db\Connection->open()
+#1 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(255): yii\db\Connection->getSlavePdo()
+#3 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(1154): yii\db\Command->prepare(true)
+#4 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#17 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\Dmitry\openServer\OpenServer\domains\books\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-08-11 13:45:57 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'AMDRMPATH' => 'C:\\Program Files\\AMD\\RyzenMaster\\'
+    'ANSICON' => '105x32766 (105x28)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Dmitry\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-APSDS3O'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000601DE'
+    'ConEmuBaseDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'C:\\Dmitry\\openServer\\OpenServer\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '191012'
+    'ConEmuCfgDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x000604E0'
+    'ConEmuDrive' => 'C:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000D071E'
+    'ConEmuIsAdmin' => 'ADMIN'
+    'ConEmuPalette' => 'OSPanel'
+    'ConEmuPID' => '7444'
+    'ConEmuServerPID' => '6712'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'c:\\dmitry\\openserver\\openserver'
+    'ConEmuWorkDrive' => 'c:'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOME' => 'c:\\dmitry\\openserver\\openserver'
+    'HOMEDRIVE' => 'c:'
+    'HOMEPATH' => '\\dmitry\\openserver\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Dmitry\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-APSDS3O'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OPENSSL_CONF' => 'c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.0-7.1\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu\\Scripts;C:\\dmitry\\openserver\\openserver\\modules\\conemu;C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\ext;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\pear;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\pear\\bin;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1;c:\\dmitry\\openserver\\openserver\\modules\\wget\\bin;c:\\dmitry\\openserver\\openserver\\modules\\database\\MariaDB-10.3\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.0-7.1\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.0-7.1;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\php.exe'
+    'PHPDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\'
+    'PHPRC' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1'
+    'PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\php.exe'
+    'PHP_BINARY' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\php.exe'
+    'PHP_BINDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\'
+    'PHP_INI' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.1\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '23'
+    'PROCESSOR_REVISION' => '0802'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m#$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QSYS_ROOTDIR' => 'D:\\programs\\quartus\\quartus\\sopc_builder\\bin'
+    'QUARTUS_ROOTDIR' => 'D:\\programs\\quartus\\quartus'
+    'SOPC_KIT_NIOS2' => 'D:\\programs\\quartus\\nios2eds'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'TMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'DESKTOP-APSDS3O'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-APSDS3O'
+    'USERNAME' => 'Dmitry'
+    'USERPROFILE' => 'C:\\Users\\Dmitry'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\'
+    '__COMPAT_LAYER' => 'RunAsAdmin Installer'
+    'PHP_SELF' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_NAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_FILENAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'PATH_TRANSLATED' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597142757.3553
+    'REQUEST_TIME' => 1597142757
+    'argv' => [
+        0 => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-08-12 13:34:08 [-][-][-][error][ParseError] ParseError: syntax error, unexpected 'const' (T_CONST) in C:\Dmitry\openServer\OpenServer\domains\books\console\controllers\ConsoleController.php:11
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('console\\control...')
+#1 [internal function]: spl_autoload_call('console\\control...')
+#2 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(637): class_exists('console\\control...')
+#3 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('console')
+#4 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('test')
+#5 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/test', Array)
+#6 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/test', Array)
+#7 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 C:\Dmitry\openServer\OpenServer\domains\books\yii(23): yii\base\Application->run()
+#9 {main}
+2020-08-12 13:34:08 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'AMDRMPATH' => 'C:\\Program Files\\AMD\\RyzenMaster\\'
+    'ANSICON' => '133x32766 (133x28)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Dmitry\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-APSDS3O'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000906A8'
+    'ConEmuBaseDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'C:\\Dmitry\\openServer\\OpenServer\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '191012'
+    'ConEmuCfgDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x002A078A'
+    'ConEmuDrive' => 'C:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x00120768'
+    'ConEmuIsAdmin' => 'ADMIN'
+    'ConEmuPalette' => 'OSPanel'
+    'ConEmuPID' => '15008'
+    'ConEmuServerPID' => '6020'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'c:\\dmitry\\openserver\\openserver'
+    'ConEmuWorkDrive' => 'c:'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOME' => 'c:\\dmitry\\openserver\\openserver'
+    'HOMEDRIVE' => 'c:'
+    'HOMEPATH' => '\\dmitry\\openserver\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Dmitry\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-APSDS3O'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OPENSSL_CONF' => 'c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu\\Scripts;C:\\dmitry\\openserver\\openserver\\modules\\conemu;C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\ext;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear\\bin;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2;c:\\dmitry\\openserver\\openserver\\modules\\wget\\bin;c:\\dmitry\\openserver\\openserver\\modules\\database\\MariaDB-10.3\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHPDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHPRC' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2'
+    'PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINARY' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_INI' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '23'
+    'PROCESSOR_REVISION' => '0802'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m#$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QSYS_ROOTDIR' => 'D:\\programs\\quartus\\quartus\\sopc_builder\\bin'
+    'QUARTUS_ROOTDIR' => 'D:\\programs\\quartus\\quartus'
+    'SOPC_KIT_NIOS2' => 'D:\\programs\\quartus\\nios2eds'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'TMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'DESKTOP-APSDS3O'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-APSDS3O'
+    'USERNAME' => 'Dmitry'
+    'USERPROFILE' => 'C:\\Users\\Dmitry'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\'
+    '__COMPAT_LAYER' => 'RunAsAdmin Installer'
+    'PHP_SELF' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_NAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_FILENAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'PATH_TRANSLATED' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597228448.0407
+    'REQUEST_TIME' => 1597228448
+    'argv' => [
+        0 => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+        1 => 'console/test'
+    ]
+    'argc' => 2
+]
+2020-08-12 13:34:35 [-][-][-][error][ParseError] ParseError: syntax error, unexpected 'const' (T_CONST) in C:\Dmitry\openServer\OpenServer\domains\books\console\controllers\ConsoleController.php:11
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('console\\control...')
+#1 [internal function]: spl_autoload_call('console\\control...')
+#2 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(637): class_exists('console\\control...')
+#3 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(596): yii\base\Module->createControllerByID('console')
+#4 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(522): yii\base\Module->createController('test')
+#5 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/test', Array)
+#6 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/test', Array)
+#7 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 C:\Dmitry\openServer\OpenServer\domains\books\yii(23): yii\base\Application->run()
+#9 {main}
+2020-08-12 13:34:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'AMDRMPATH' => 'C:\\Program Files\\AMD\\RyzenMaster\\'
+    'ANSICON' => '133x32766 (133x28)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Dmitry\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-APSDS3O'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000906A8'
+    'ConEmuBaseDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'C:\\Dmitry\\openServer\\OpenServer\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '191012'
+    'ConEmuCfgDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x002A078A'
+    'ConEmuDrive' => 'C:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x00120768'
+    'ConEmuIsAdmin' => 'ADMIN'
+    'ConEmuPalette' => 'OSPanel'
+    'ConEmuPID' => '15008'
+    'ConEmuServerPID' => '6020'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'c:\\dmitry\\openserver\\openserver'
+    'ConEmuWorkDrive' => 'c:'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOME' => 'c:\\dmitry\\openserver\\openserver'
+    'HOMEDRIVE' => 'c:'
+    'HOMEPATH' => '\\dmitry\\openserver\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Dmitry\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-APSDS3O'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OPENSSL_CONF' => 'c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu\\Scripts;C:\\dmitry\\openserver\\openserver\\modules\\conemu;C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\ext;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear\\bin;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2;c:\\dmitry\\openserver\\openserver\\modules\\wget\\bin;c:\\dmitry\\openserver\\openserver\\modules\\database\\MariaDB-10.3\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHPDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHPRC' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2'
+    'PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINARY' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_INI' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '23'
+    'PROCESSOR_REVISION' => '0802'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m#$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QSYS_ROOTDIR' => 'D:\\programs\\quartus\\quartus\\sopc_builder\\bin'
+    'QUARTUS_ROOTDIR' => 'D:\\programs\\quartus\\quartus'
+    'SOPC_KIT_NIOS2' => 'D:\\programs\\quartus\\nios2eds'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'TMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'DESKTOP-APSDS3O'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-APSDS3O'
+    'USERNAME' => 'Dmitry'
+    'USERPROFILE' => 'C:\\Users\\Dmitry'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\'
+    '__COMPAT_LAYER' => 'RunAsAdmin Installer'
+    'PHP_SELF' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_NAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_FILENAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'PATH_TRANSLATED' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597228475.6789
+    'REQUEST_TIME' => 1597228475
+    'argv' => [
+        0 => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+        1 => 'console/test'
+    ]
+    'argc' => 2
+]
+2020-08-12 13:44:12 [-][-][-][error][Error] Error: Class 'console\controllers\BookAuthor' not found in C:\Dmitry\openServer\OpenServer\domains\books\console\controllers\ConsoleController.php:22
+Stack trace:
+#0 [internal function]: console\controllers\ConsoleController->actionTest()
+#1 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#3 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('test', Array)
+#4 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('test', Array)
+#5 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('console/test', Array)
+#6 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('console/test', Array)
+#7 C:\Dmitry\openServer\OpenServer\domains\books\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 C:\Dmitry\openServer\OpenServer\domains\books\yii(23): yii\base\Application->run()
+#9 {main}
+2020-08-12 13:44:12 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'AMDRMPATH' => 'C:\\Program Files\\AMD\\RyzenMaster\\'
+    'ANSICON' => '133x32766 (133x28)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Dmitry\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-APSDS3O'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000906A8'
+    'ConEmuBaseDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'C:\\Dmitry\\openServer\\OpenServer\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '191012'
+    'ConEmuCfgDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x002A078A'
+    'ConEmuDrive' => 'C:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x00120768'
+    'ConEmuIsAdmin' => 'ADMIN'
+    'ConEmuPalette' => 'OSPanel'
+    'ConEmuPID' => '15008'
+    'ConEmuServerPID' => '6020'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'c:\\dmitry\\openserver\\openserver'
+    'ConEmuWorkDrive' => 'c:'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'HOME' => 'c:\\dmitry\\openserver\\openserver'
+    'HOMEDRIVE' => 'c:'
+    'HOMEPATH' => '\\dmitry\\openserver\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Dmitry\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-APSDS3O'
+    'NUMBER_OF_PROCESSORS' => '12'
+    'OneDrive' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OneDriveConsumer' => 'C:\\Users\\Dmitry\\OneDrive'
+    'OPENSSL_CONF' => 'c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'PATH' => 'C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu\\Scripts;C:\\dmitry\\openserver\\openserver\\modules\\conemu;C:\\dmitry\\openserver\\openserver\\modules\\conemu\\ConEmu;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\ext;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\pear\\bin;c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2;c:\\dmitry\\openserver\\openserver\\modules\\wget\\bin;c:\\dmitry\\openserver\\openserver\\modules\\database\\MariaDB-10.3\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\bin;c:\\dmitry\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHPDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHPRC' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2'
+    'PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINARY' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_BINDIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\'
+    'PHP_INI' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'c:\\dmitry\\openserver\\openserver\\modules\\php\\PHP_7.2\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '23'
+    'PROCESSOR_REVISION' => '0802'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m#$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'QSYS_ROOTDIR' => 'D:\\programs\\quartus\\quartus\\sopc_builder\\bin'
+    'QUARTUS_ROOTDIR' => 'D:\\programs\\quartus\\quartus'
+    'SOPC_KIT_NIOS2' => 'D:\\programs\\quartus\\nios2eds'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'TMP' => 'c:\\dmitry\\openserver\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'DESKTOP-APSDS3O'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-APSDS3O'
+    'USERNAME' => 'Dmitry'
+    'USERPROFILE' => 'C:\\Users\\Dmitry'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\'
+    '__COMPAT_LAYER' => 'RunAsAdmin Installer'
+    'PHP_SELF' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_NAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'SCRIPT_FILENAME' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'PATH_TRANSLATED' => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597229052.4723
+    'REQUEST_TIME' => 1597229052
+    'argv' => [
+        0 => 'c:\\Dmitry\\openServer\\OpenServer\\domains\\books\\yii'
+        1 => 'console/test'
+    ]
+    'argc' => 2
+]
